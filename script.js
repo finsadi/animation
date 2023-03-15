@@ -12,8 +12,11 @@ const iconsSrc = [
     'https://www.logo.wine/a/logo/Meta_Platforms/Meta_Platforms-Logo.wine.svg',
 ];
 
-const iconSize = 75;
-const numIcons = 50;
+const screenSizeFactor = Math.min(canvas.width, canvas.height) / 1080;
+const iconSize = 100 * screenSizeFactor;
+const numIcons = 25;
+
+const speedFactor = screenSizeFactor;
 
 class StockIcon {
     constructor() {
@@ -22,8 +25,8 @@ class StockIcon {
         this.size = iconSize;
         this.x = Math.random() * (canvas.width - this.size);
         this.y = Math.random() * (canvas.height - this.size);
-        this.speedX = (Math.random() * 2 - 1) * 2;
-        this.speedY = (Math.random() * 2 - 1) * 2;
+        this.speedX = (Math.random() * 2 - 1) * 2 * speedFactor;
+        this.speedY = (Math.random() * 2 - 1) * 2 * speedFactor;
     }
 
     draw() {
@@ -51,7 +54,6 @@ for (let i = 0; i < numIcons; i++) {
 }
 
 function animate() {
-    // Create radial gradient
     const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height)
@@ -60,11 +62,9 @@ function animate() {
     gradient.addColorStop(0, '#00E091');
     gradient.addColorStop(1, 'black');
 
-    // Set the gradient as the background
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Draw and update the stock icons
     stockIcons.forEach(stockIcon => {
         stockIcon.update();
         stockIcon.draw();
