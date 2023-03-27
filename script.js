@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 const screenSizeFactor = Math.min(canvas.width, canvas.height) / 1080;
 const iconSize = 100 * screenSizeFactor;
-const speedFactor = screenSizeFactor;
+const speedFactor = Math.min(canvas.width, canvas.height) / 1080;
 
 const centerX = canvas.width / 2;
 const centerY = canvas.height / 2;
@@ -117,4 +117,9 @@ window.addEventListener('resize', () => {
 
     centerX = canvas.width / 2;
     centerY = canvas.height / 2;
+
+    const speedFactor = Math.min(canvas.width, canvas.height) / 1080;
+    stockIcons.forEach(stockIcon => {
+        stockIcon.speed = 0.02 * speedFactor;
+    });
 });
