@@ -11,15 +11,21 @@ const speedFactor = Math.min(canvas.width, canvas.height) / 1080;
 const centerX = canvas.width / 2;
 const centerY = canvas.height / 2;
 
+const initialCanvasWidth = 1440;
+const initialCanvasHeight = 744;
+
+const ellipseWidthFactor = canvas.width / initialCanvasWidth;
+const ellipseHeightFactor = canvas.height / initialCanvasHeight;
+
 const ellipseParams = [
     {
-        width: Math.min(canvas.width * 0.9, 1310.73 * screenSizeFactor),
-        height: Math.min(canvas.height * 0.9, 508.33 * screenSizeFactor),
+        width: Math.min(canvas.width * 0.9, 1310.73 * ellipseWidthFactor),
+        height: Math.min(canvas.height * 0.9, 508.33 * ellipseHeightFactor),
         rotation: -2.35 * (Math.PI / 180)
     },
     {
-        width: Math.min(canvas.width * 0.9, 1027.36 * screenSizeFactor),
-        height: Math.min(canvas.height * 0.9, 593.42 * screenSizeFactor),
+        width: Math.min(canvas.width * 0.9, 1027.36 * ellipseWidthFactor),
+        height: Math.min(canvas.height * 0.9, 593.42 * ellipseHeightFactor),
         rotation: 20.87 * (Math.PI / 180)
     }
 ];
@@ -109,11 +115,14 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    ellipseParams[0].width = Math.min(canvas.width * 0.9, 1105.13 * screenSizeFactor);
-    ellipseParams[0].height = Math.min(canvas.height * 0.9, 507.96 * screenSizeFactor);
+    const ellipseWidthFactor = canvas.width / initialCanvasWidth;
+    const ellipseHeightFactor = canvas.height / initialCanvasHeight;
 
-    ellipseParams[1].width = Math.min(canvas.width * 0.9, 1090 * screenSizeFactor);
-    ellipseParams[1].height = Math.min(canvas.height * 0.9, 641 * screenSizeFactor);
+    ellipseParams[0].width = Math.min(canvas.width * 0.9, 1310.73 * ellipseWidthFactor);
+    ellipseParams[0].height = Math.min(canvas.height * 0.9, 508.33 * ellipseHeightFactor);
+
+    ellipseParams[1].width = Math.min(canvas.width * 0.9, 1027.36 * ellipseWidthFactor);
+    ellipseParams[1].height = Math.min(canvas.height * 0.9, 593.42 * ellipseHeightFactor);
 
     centerX = canvas.width / 2;
     centerY = canvas.height / 2;
