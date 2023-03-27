@@ -1,8 +1,13 @@
 const canvas = document.getElementById('stockAnimation');
 const ctx = canvas.getContext('2d');
+const dpr = window.devicePixelRatio || 1;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * dpr;
+canvas.height = window.innerHeight * dpr;
+canvas.style.width = window.innerWidth + 'px';
+canvas.style.height = window.innerHeight + 'px';
+ctx.scale(dpr, dpr);
+ctx.imageSmoothingEnabled = false;
 
 const screenSizeFactor = Math.min(canvas.width, canvas.height) / 1080;
 const iconSize = 100 * screenSizeFactor;
@@ -115,8 +120,8 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const ellipseWidthFactor = canvas.width / initialCanvasWidth;
-    const ellipseHeightFactor = canvas.height / initialCanvasHeight;
+    const ellipseWidthFactor = canvas.width / 1440;
+    const ellipseHeightFactor = canvas.height / 744;
 
     ellipseParams[0].width = Math.min(canvas.width * 0.9, 1310.73 * ellipseWidthFactor);
     ellipseParams[0].height = Math.min(canvas.height * 0.9, 508.33 * ellipseHeightFactor);
@@ -132,3 +137,4 @@ window.addEventListener('resize', () => {
         stockIcon.speed = 0.01 * speedFactor;
     });
 });
+
