@@ -48,7 +48,7 @@ class StockIcon {
         this.image.src = iconsSrc[ellipseIndex][iconIndex];
         this.size = iconSize;
         this.angle = angle;
-        this.speed = 0.02 * speedFactor;
+        this.speed = 0.01 * speedFactor;
         this.ellipseIndex = ellipseIndex;
     }
 
@@ -120,6 +120,6 @@ window.addEventListener('resize', () => {
 
     const speedFactor = Math.min(canvas.width, canvas.height) / 1080;
     stockIcons.forEach(stockIcon => {
-        stockIcon.speed = 0.02 * speedFactor;
+        stockIcon.speed = 0.01 * speedFactor;
     });
 });
