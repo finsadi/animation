@@ -13,14 +13,14 @@ const centerY = canvas.height / 2;
 
 const ellipseParams = [
     {
-        width: Math.min(canvas.width * 0.9, 1105.13 * screenSizeFactor),
-        height: Math.min(canvas.height * 0.9, 507.96 * screenSizeFactor),
+        width: Math.min(canvas.width * 0.9, 1310.73 * screenSizeFactor),
+        height: Math.min(canvas.height * 0.9, 508.33 * screenSizeFactor),
         rotation: -2.35 * (Math.PI / 180)
     },
     {
-        width: Math.min(canvas.width * 0.9, 1090 * screenSizeFactor),
-        height: Math.min(canvas.height * 0.9, 641 * screenSizeFactor),
-        rotation: 15.45 * (Math.PI / 180)
+        width: Math.min(canvas.width * 0.9, 1027.36 * screenSizeFactor),
+        height: Math.min(canvas.height * 0.9, 593.42 * screenSizeFactor),
+        rotation: 20.87 * (Math.PI / 180)
     }
 ];
 
@@ -48,7 +48,7 @@ class StockIcon {
         this.image.src = iconsSrc[ellipseIndex][iconIndex];
         this.size = iconSize;
         this.angle = angle;
-        this.speed = (Math.random() * 2 - 1) * 0.02 * speedFactor;
+        this.speed = 0.02 * speedFactor;
         this.ellipseIndex = ellipseIndex;
     }
 
@@ -80,11 +80,14 @@ function drawEllipse(ellipse) {
     ctx.save();
     ctx.beginPath();
     ctx.ellipse(centerX, centerY, ellipse.width / 2, ellipse.height / 2, ellipse.rotation, 0, 2 * Math.PI);
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 1;
     ctx.filter = 'blur(1px)';
     ctx.closePath();
     ctx.stroke();
     ctx.restore();
 }
+
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
