@@ -2,12 +2,9 @@ const canvas = document.getElementById('stockAnimation');
 const ctx = canvas.getContext('2d');
 const dpr = window.devicePixelRatio || 1;
 
-canvas.width = window.innerWidth * dpr;
-canvas.height = window.innerHeight * dpr;
-canvas.style.width = window.innerWidth + 'px';
-canvas.style.height = window.innerHeight + 'px';
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 ctx.scale(dpr, dpr);
-ctx.imageSmoothingEnabled = false;
 
 const screenSizeFactor = Math.min(canvas.width, canvas.height) / 1080;
 const iconSize = 100 * screenSizeFactor;
