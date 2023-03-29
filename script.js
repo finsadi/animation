@@ -32,18 +32,18 @@ const ellipseParams = [
 
 const iconsSrc = [
     [
-        'https://static.wixstatic.com/media/7f220a_3ec1f70b36734641953984743ccb710d~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_3d4d84a1636745f096385b4f284c9e3d~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_317d91e479ba485bb6e1e50e7996098b~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_8afc0acaae9249b48ac4e27b36d194ba~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_9971ac5495bf41918f210f570419a6fd~mv2.png',
+        'https://static.wixstatic.com/shapes/69b209_6ccd5cd65f344a888890fd589ea05de4.svg',
+        'https://static.wixstatic.com/shapes/69b209_71146384278d4c0f9f560e944e51e776.svg',
+        'https://static.wixstatic.com/shapes/69b209_daa9d92ad10e468f843780c784e01af3.svg',
+        'https://static.wixstatic.com/shapes/69b209_d742815d9bf9473080d20bdf2689ecb9.svg',
+        'https://static.wixstatic.com/shapes/69b209_16734c85b9c64b16a15272844d096fb7.svg',
     ],
     [
-        'https://static.wixstatic.com/media/7f220a_2962da97a26246298035eebd212de50d~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_537b78cb090346d8b12a894acdb8c11e~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_77f9b530122e45ae8cd46e18c22964c2~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_340411b7fcba4c699a41de16366d934c~mv2.png',
-        'https://static.wixstatic.com/media/7f220a_e423f4c9303b4c7087c6e1e84d64312d~mv2.png',
+        'https://static.wixstatic.com/shapes/69b209_a4c2cd9892284f7ca0a9c3c312f35903.svg',
+        'https://static.wixstatic.com/shapes/69b209_3505b6eae3cd45e1846cd729f425bc3e.svg',
+        'https://static.wixstatic.com/shapes/69b209_46cd96b2e30a4b9a97db0501a81d3a1e.svg',
+        'https://static.wixstatic.com/shapes/69b209_b45e89ea2a9d4f55943d582fd375ad2a.svg',
+        'https://static.wixstatic.com/shapes/69b209_b3e81823eb684efeb06416eb3641b99a.svg',
     ]
 ];
 
