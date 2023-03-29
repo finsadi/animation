@@ -54,7 +54,7 @@ class StockIcon {
         this.image.src = iconsSrc[ellipseIndex][iconIndex];
         this.size = iconSize;
         this.angle = angle;
-        this.speed = 0.01 * speedFactor;
+        this.speed = 0.006 * speedFactor;
         this.ellipseIndex = ellipseIndex;
     }
 
@@ -86,7 +86,7 @@ function drawEllipse(ellipse) {
     ctx.save();
     ctx.beginPath();
     ctx.ellipse(centerX, centerY, ellipse.width / 2, ellipse.height / 2, ellipse.rotation, 0, 2 * Math.PI);
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = 'rgba(32, 35, 37, 0.2)';
     ctx.lineWidth = 1;
     ctx.filter = 'blur(1px)';
     ctx.closePath();
@@ -129,6 +129,6 @@ window.addEventListener('resize', () => {
 
     const speedFactor = Math.min(canvas.width, canvas.height) / 1080;
     stockIcons.forEach(stockIcon => {
-        stockIcon.speed = 0.01 * speedFactor;
+        stockIcon.speed = 0.006 * speedFactor;
     });
 });
