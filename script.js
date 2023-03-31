@@ -89,8 +89,8 @@ function drawEllipse(ellipse) {
 
     // Create gradient
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-    gradient.addColorStop(0, 'rgba(0, 224, 145, 0.2)'); // #00E091 with 20% opacity
-    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.2)'); // #FFFFFF with 20% opacity
+    gradient.addColorStop(0, 'rgba(0, 224, 145, 0.2001)'); // #00E091 with 20% opacity
+    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.2001)'); // #FFFFFF with 20% opacity
 
     ctx.strokeStyle = gradient;
     ctx.lineWidth = 1;
