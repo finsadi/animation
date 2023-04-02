@@ -86,21 +86,13 @@ function drawEllipse(ellipse) {
     ctx.save();
     ctx.beginPath();
     ctx.ellipse(centerX, centerY, ellipse.width / 2, ellipse.height / 2, ellipse.rotation, 0, 2 * Math.PI);
-
-    // Create gradient
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-    gradient.addColorStop(0, 'rgba(0, 224, 145, 0.2001)'); // #00E091 with 20% opacity
-    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.2001)'); // #FFFFFF with 20% opacity
-
-    ctx.strokeStyle = gradient;
+    ctx.strokeStyle = 'rgba(32, 35, 37, 0.2)';
     ctx.lineWidth = 1;
     ctx.filter = 'blur(1px)';
     ctx.closePath();
     ctx.stroke();
     ctx.restore();
 }
-
-
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
